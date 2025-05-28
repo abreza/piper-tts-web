@@ -103,7 +103,7 @@ export class TtsSession {
     );
   }
 
-  async predict(text: string, config: any): Promise<Blob> {
+  async predict(text: string, config?: any): Promise<Blob> {
     await this.waitReady; // wait for the session to be ready
 
     const input = JSON.stringify([{ text: text.trim() }]);
